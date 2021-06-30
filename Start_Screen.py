@@ -30,16 +30,32 @@ class Start_Screen:
 
 
         # Button Frame (row 2)
-        self.question_buttons_frame = Frame()
+        self.question_buttons_frame = Frame(self.start_screen_frame, bg=background_colour)
         self.question_buttons_frame.grid(row=2)
 
+        # Buttons go here...
+        button_font = "Oswald 10 bold"
+
         # 5 Question Button
+        self.five_questions_button = Button(self.question_buttons_frame, text="5 Questions",
+                                             font=button_font, bg="SpringGreen2")
+        self.five_questions_button.grid(row=0, column=1, padx=5, pady=10)
 
         # 10 Question Button
+        self.ten_questions_button = Button(self.question_buttons_frame, text="10 Questions",
+                                            font=button_font, bg="DarkOrange1")
+        self.ten_questions_button.grid(row=0, column=2, padx=5, pady=10)
 
         # 20 Question Button
+        self.twenty_questions_button = Button(self.question_buttons_frame, text="20 Questions",
+                                               font=button_font, bg="firebrick1")
+        self.twenty_questions_button.grid(row=0, column=3, padx=5, pady=10)
 
-        # Help & Game Statistics Buttons (row 3, two buttons inside frame)
+        # Help button (row 3, two buttons inside frame)
+        self.help_button = Button(self.start_screen_frame, text="Help / Rules",
+                                    bg="yellow", font=button_font)
+        self.help_button.grid(row=3, column=0, padx=10)
+
 
 
 # main routine
