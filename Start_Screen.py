@@ -29,7 +29,7 @@ class Start_Screen:
         self.instructions_label.grid(row=1)
 
 
-        # Button Frame (row 2)
+        # Button Frame (row 2, three buttons inside frame)
         self.question_buttons_frame = Frame(self.start_screen_frame, bg=background_colour)
         self.question_buttons_frame.grid(row=2)
 
@@ -51,10 +51,19 @@ class Start_Screen:
                                                font=button_font, bg="firebrick1")
         self.twenty_questions_button.grid(row=0, column=3, padx=5, pady=10)
 
-        # Help button (row 3, two buttons inside frame)
-        self.help_button = Button(self.start_screen_frame, text="Help / Rules",
-                                    bg="yellow", font=button_font)
-        self.help_button.grid(row=3, column=0, padx=10)
+        # Help & Game Statistics button (row 3, two buttons inside frame)
+        self.help_and_statistics_buttons_frame = Frame(self.start_screen_frame, bg=background_colour)
+        self.help_and_statistics_buttons_frame.grid(row=3)
+
+        # Help & Game Statistics button 
+        self.help_button = Button(self.help_and_statistics_buttons_frame, text="Help / Rules",
+                                    bg="yellow", font="Oswald 15")
+        self.help_button.grid(row=3, column=0, padx=5)
+
+        self.game_statistics_button = Button(self.help_and_statistics_buttons_frame, 
+                                            text="Game Statistics", 
+                                            bg="snow4", font="Oswald 15")
+        self.game_statistics_button.grid(row=3, column=1, padx=5)
 
 
 
