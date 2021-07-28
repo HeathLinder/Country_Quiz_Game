@@ -21,7 +21,7 @@ class Welcome:
         self.welcome_label.grid(row=0)
 
         # Help/Rules Button (row 1)
-        self.help_screen_button = Button(self.welcome_frame, text="Help/Rules",
+        self.help_screen_button = Button(self.welcome_frame, text="Help",
                                         font="Oswald 15", bg="yellow", command=self.help_screen)
         self.help_screen_button.grid(row=1, padx=10, pady=10)
 
@@ -52,7 +52,7 @@ class Help_Screen:
         self.help_screen_frame.grid()
 
         # Heading (row 0)
-        self.help_screen_label = Label(self.help_screen_frame, text="Help / Rules",
+        self.help_screen_label = Label(self.help_screen_frame, text="Help",
                                         font="Oswald 19 bold", bg="aquamarine",
                                         padx=10, pady=10)
         self.help_screen_label.grid(row=0)
@@ -94,6 +94,6 @@ class Help_Screen:
 # main routine
 if __name__ == "__main__":
     root = Tk()
-    root.title("Help/Rules")
+    root.title("Help")
     something = Welcome(root)
     root.mainloop()
