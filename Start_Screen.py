@@ -56,7 +56,7 @@ class Start_Screen:
         self.help_and_statistics_buttons_frame.grid(row=3)
 
         # Help & Game Statistics button 
-        self.help_button = Button(self.help_and_statistics_buttons_frame, text="Help / Rules",
+        self.help_button = Button(self.help_and_statistics_buttons_frame, text="Help",
                                     bg="yellow", font="Oswald 15")
         self.help_button.grid(row=3, column=0, padx=5)
 
@@ -64,6 +64,8 @@ class Start_Screen:
                                             text="Game Statistics", 
                                             bg="snow4", font="Oswald 15")
         self.game_statistics_button.grid(row=3, column=1, padx=5)
+
+    
 
 
 
