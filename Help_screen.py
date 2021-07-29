@@ -20,7 +20,7 @@ class Welcome:
                                     padx=10, pady=10)
         self.welcome_label.grid(row=0)
 
-        # Help/Rules Button (row 1)
+        # Help Button (row 1)
         self.help_screen_button = Button(self.welcome_frame, text="Help",
                                         font="Oswald 15", bg="yellow", command=self.help_screen)
         self.help_screen_button.grid(row=1, padx=10, pady=10)
