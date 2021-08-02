@@ -37,10 +37,10 @@ class Help_Screen:
         # Disable Help/Rules Button
         partner.help_screen_button.config(state=DISABLED)
 
-        # Sets up the child window (ie: Help/Rules Box)
+        # Sets up the child window (ie: Help Box)
         self.help_box = Toplevel()
 
-        # If user presses cross in top right, closes help and re-enables Help/Rules Button
+        # If user presses cross in top right, closes help and re-enables Help Button
         self.help_box.protocol('WM_DELETE_WINDOW', partial(self.close_help, partner))
 
         # Formatiing Variables
@@ -57,7 +57,7 @@ class Help_Screen:
                                         padx=10, pady=10)
         self.help_screen_label.grid(row=0)
 
-        # Instructions/Rules (row 1)
+        # Instructions (row 1)
         self.help_screen_instructions = Label(self.help_screen_frame, text="Choose the amount of "
                                              "questions you would like to try out."
                                              "\nWhen you enter the play window,"

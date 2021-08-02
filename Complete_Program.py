@@ -66,7 +66,6 @@ class Start_Screen:
         self.game_statistics_button.grid(row=3, column=1, padx=5)
 
     def help_screen(self):
-        print("You asked for help.")
         get_help_screen = Help_Screen(self)
         
         
