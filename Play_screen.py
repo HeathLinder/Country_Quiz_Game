@@ -2,6 +2,7 @@ from tkinter import *
 from functools import partial # To prevent unwanted windows
 import random
 
+
 class Welcome:
     def __init__(self, parent):
 
@@ -45,11 +46,11 @@ class Welcome:
         self.ten_questions_button.grid(row=0, column=3, padx=5, pady=10)
 
     def play_screen(self):
-        get_play_screen = Play_Screen(self)
+        get_play_screen = PlayScreen(self)
         
         
 
-class Play_Screen:
+class PlayScreen:
     def __init__(self, partner):
 
         # Disable the three question buttons after one is pushed
@@ -71,11 +72,28 @@ class Play_Screen:
                                 pady=10, padx=10)
         self.play_frame.grid()
 
-        # Play Heading
+        # Play Heading (row 0)
         self.play_label = Label(self.play_frame, text="Country Quiz Game",
                                 font=("Oswald 19 bold"), bg=background_colour,
                                 padx=10, pady=10)
         self.play_label.grid(row=0)
+
+        # Instructions (row 1)
+        self.play_screen_instructions = Label(self.play_frame, 
+                                              text="Choose which answer you think is correct",
+                                              justify=LEFT, width=40, bg=background_colour,
+                                              wrap=250)
+        self.play_screen_instructions.grid(row=1)
+
+        # Country outlines go here (row 2)
+        self.outline_frame = Frame(self.play_frame)
+        self.outline_frame.grid(row=2, pady=10)
+
+        photo = PhotoImage("Australia.gif")
+        
+        self.outline_label = Label(self.outline_frame, image=photo, padx=10, pady=10, width=200, height=200 )
+        self.outline_label.photo = photo
+        self.outline_label.grid(row=1)
 
 
     # Put help button back to normal...
