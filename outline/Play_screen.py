@@ -1,8 +1,6 @@
 from tkinter import *
 from functools import partial # To prevent unwanted windows
 import random
-import os
-
 
 
 class Welcome:
@@ -95,14 +93,12 @@ class PlayScreen:
 
             if 0 < country_outline == 27:
                 photo = PhotoImage(file=outline)
-
-        
+                self.outline_label = Label(self.outline_frame, image=photo, padx=10, pady=10)
+                self.outline_label.photo = photo
+                self.outline_label.grid()
                 
         
         #photo = PhotoImage(file="China.gif")
-        self.outline_label = Label(self.outline_frame, image=photo, padx=10, pady=10)
-        self.outline_label.photo = photo
-        self.outline_label.grid()
 
                 
 
