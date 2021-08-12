@@ -96,8 +96,7 @@ class PlayScreen:
 
         for item in range(0, 27):
             country_outline = random.randint(0, 27)
-
-
+            
             if 0 < country_outline == 27:
                 photo = PhotoImage(file=outline)
 
@@ -106,7 +105,7 @@ class PlayScreen:
         
                 
         
-        photo = PhotoImage(file="China.gif")
+        
         self.outline_label = Label(self.outline_frame, image=photo, padx=10, pady=10)
         self.outline_label.photo = photo
         self.outline_label.grid()
