@@ -81,8 +81,12 @@ class PlayScreen:
         # Country outlines go here (row 2)
         self.outline_frame = Frame(self.play_frame)
         self.outline_frame.grid(row=2, pady=10)
+    
+    def country_outline(self):
 
-        #28 
+        outlines= []
+
+        #28
         outline = ["Australia.gif", "Austria.gif", "China.gif", "Denmark.gif", "Finland.gif",
                    "France.gif", "Germany.gif", "Greece.gif", "Hungary.gif", 
                    "Iceland.gif", "India.gif", "Indonesia.gif", "Ireland.gif", "Italy.gif",
@@ -93,13 +97,16 @@ class PlayScreen:
         for item in range(0, 27):
             country_outline = random.randint(0, 27)
 
+
             if 0 < country_outline == 27:
                 photo = PhotoImage(file=outline)
+
+            outlines.append(photo)
 
         
                 
         
-        #photo = PhotoImage(file="China.gif")
+        photo = PhotoImage(file="China.gif")
         self.outline_label = Label(self.outline_frame, image=photo, padx=10, pady=10)
         self.outline_label.photo = photo
         self.outline_label.grid()
